@@ -1,0 +1,4 @@
+Strategy,Cumulative Return,Sharpe Ratio,Max Drawdown,Profit Factor,Winning %,Avg Holding (days),N Trades
+DQN (E2_nifty50_bah_sma),23.50%,1.0420,-20.38%,0.9832,28.57%,125.9,14
+Buy-and-Hold Nifty 50,14.77%,0.6050,-38.44%,1.1301,58.87%,248.0,1
+SMA(20) Strategy [non-paper assumption],34.09%,2.0131,-9.12%,1.5189,41.53%,0.0,0

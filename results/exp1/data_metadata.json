@@ -1,0 +1,18 @@
+{
+  "train_start": "2010-01-04",
+  "train_end": "2019-12-31",
+  "test_start": "2020-01-01",
+  "test_end": "2020-12-30",
+  "n_train_states": 2432,
+  "n_test_states": 239,
+  "state_dim": 10,
+  "tickers": [
+    "RELIANCE.NS"
+  ],
+  "scaler_params": {
+    "RELIANCE.NS": {
+      "min": -0.13153886276678717,
+      "max": 0.14718038908093978
+    }
+  }
+}

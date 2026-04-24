@@ -1,0 +1,52 @@
+{
+  "ticker_universe_id": "nifty50_subset_v1",
+  "ticker_universe": [
+    "RELIANCE.NS"
+  ],
+  "ticker_universe_description": "5-stock subset of Nifty 50 large-cap constituents (RELIANCE, TCS, HDFCBANK, INFY, ICICIBANK). Fixed as of 2024. All were Nifty 50 members throughout 2010-2020. Full 50-stock universe not used due to computational constraints.",
+  "benchmark": "^NSEI",
+  "price_field": "Close (unadjusted)",
+  "missing_data_policy": "forward-fill up to 5 days, then drop",
+  "state_window_n": 10,
+  "initial_cash": 100000.0,
+  "trade_size": 1,
+  "execution_timing": "same-day close price",
+  "action_mapping": {
+    "0": "hold",
+    "1": "buy",
+    "2": "sell"
+  },
+  "reward_type": "pct_return",
+  "reward_formula": "r_t = (V_t - V_{t-1}) / V_{t-1}",
+  "shorting_allowed": false,
+  "transaction_cost": 0.0,
+  "normalization_range": "0_1",
+  "normalization_fit_scope": "full_sample",
+  "normalization_formula": "x' = (x - min(x)) / (max(x) - min(x))",
+  "normalization_note": "Paper text says [-1,1] but formula gives [0,1]; using formula",
+  "learning_rate": 0.001,
+  "gamma": 0.99,
+  "n_episodes_paper": 10000,
+  "n_episodes_used": 50,
+  "n_episodes_note": "Reduced from 10000 to 50 for computational feasibility",
+  "network_architecture": "Linear(10,128)->ReLU->Linear(128,64)->ReLU->Linear(64,3)",
+  "optimizer": "Adam",
+  "batch_size": 64,
+  "buffer_capacity": 10000,
+  "target_network": false,
+  "epsilon_start": 1.0,
+  "epsilon_min": 0.01,
+  "epsilon_decay": 0.995,
+  "risk_free_rate": 0.0,
+  "sharpe_annualization": 252,
+  "random_seed": 42,
+  "train_period": "2010-01-01 to 2019-12-31",
+  "test_period": "2020-01-01 to 2020-12-31",
+  "paper_inconsistencies": [
+    "Normalization text says [-1,1] but formula gives [0,1] \u2192 using formula [0,1]",
+    "Reward described as both percentage return and wealth change \u2192 using B1 (pct_return)",
+    "DQN described with discrete actions but also quantity scaling \u2192 using 1-share discrete",
+    "Paper mixes single-stock and multi-stock language \u2192 using single-stock (RELIANCE.NS)",
+    "SMA/RSI mentioned in prose but no parameters given \u2192 omitted from strict exp1"
+  ]
+}

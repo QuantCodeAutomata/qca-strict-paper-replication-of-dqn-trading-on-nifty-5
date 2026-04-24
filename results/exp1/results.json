@@ -1,0 +1,39 @@
+{
+  "experiment": "exp1_strict_replication",
+  "dqn_metrics": {
+    "label": "DQN Strategy",
+    "cumulative_return": -0.0001867526245119544,
+    "sharpe_ratio": -0.2828477943748828,
+    "max_drawdown": -0.0006450619506837008,
+    "profit_factor": 0.5476187836032691,
+    "winning_percentage": 0.5,
+    "avg_holding_period": 2.0,
+    "n_trades": 2,
+    "n_days": 238
+  },
+  "benchmark_metrics": {
+    "label": "Buy-and-Hold Nifty 50",
+    "cumulative_return": 0.14770779358198283,
+    "sharpe_ratio": 0.6050207654111353,
+    "max_drawdown": -0.3843985245274205,
+    "profit_factor": 1.1301080897817275,
+    "winning_percentage": 0.5887096774193549,
+    "avg_holding_period": 248.0,
+    "n_trades": 1,
+    "n_days": 248
+  },
+  "interpretation": {
+    "dqn_outperforms_on_cumulative_return": false,
+    "dqn_outperforms_on_sharpe": false,
+    "dqn_outperforms_on_max_drawdown": true,
+    "paper_claim_supported": false,
+    "note": "Paper provides no target numerical values. Success assessed by directional superiority on main metrics."
+  },
+  "output_dir": "results/exp1",
+  "model_path": "results/exp1/dqn_model.pt",
+  "n_episodes_used": 50,
+  "training_history_summary": {
+    "final_epsilon": 0.778312557068642,
+    "mean_reward_last_10pct": 0.10937313519355991
+  }
+}

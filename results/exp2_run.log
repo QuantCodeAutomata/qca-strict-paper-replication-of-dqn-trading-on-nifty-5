@@ -1,0 +1,255 @@
+2026-04-24 13:24:17,462 [INFO] __main__: Starting Experiment 2: Ambiguity-Controlled Variants
+2026-04-24 13:24:17,463 [INFO] experiments.exp2_variants: ============================================================
+2026-04-24 13:24:17,463 [INFO] experiments.exp2_variants: EXP2: Ambiguity-Controlled Replication Variants
+2026-04-24 13:24:17,463 [INFO] experiments.exp2_variants: ============================================================
+2026-04-24 13:24:17,464 [INFO] experiments.exp2_variants: Downloading data for all variants...
+2026-04-24 13:24:17,464 [INFO] data.download: Loading cached data from data/cache/nifty50_2010-01-01_2020-12-31.csv
+2026-04-24 13:24:17,470 [INFO] data.download: Loading cached benchmark from data/cache/benchmark_NSEI_2010-01-01_2020-12-31.csv
+2026-04-24 13:24:17,473 [INFO] data.download: Aligned to 2692 common trading dates (stocks: 2712, benchmark: 2692)
+2026-04-24 13:24:17,475 [INFO] data.download: Loading cached data from data/cache/nifty50_2010-01-01_2020-12-31.csv
+2026-04-24 13:24:17,478 [INFO] data.download: Loading cached benchmark from data/cache/benchmark_NSEI_2010-01-01_2020-12-31.csv
+2026-04-24 13:24:17,481 [INFO] data.download: Aligned to 2692 common trading dates (stocks: 2712, benchmark: 2692)
+2026-04-24 13:24:17,482 [INFO] experiments.exp2_variants: Running variant: A1_A3 — Min-Max [0,1] formula, full-sample fitting (strict exp1 baseline)
+2026-04-24 13:24:17,484 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:24:18,445 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:24:26,633 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:24:35,509 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:24:44,186 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:24:53,017 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:25:01,832 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:25:04,973 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:25:04,976 [INFO] agent.dqn_agent: Model saved to results/exp2/A1_A3/model.pt
+2026-04-24 13:25:05,270 [INFO] visualization.plots: Saved figure to results/exp2/A1_A3/equity_curves.png
+2026-04-24 13:25:05,271 [INFO] experiments.exp2_variants: Variant A1_A3: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:25:05,276 [INFO] experiments.exp2_variants: Running variant: A1_A4 — Min-Max [0,1] formula, train-only fitting (no leakage)
+2026-04-24 13:25:05,279 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:25:05,287 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:25:13,685 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1811 | Epsilon: 0.9851 | Loss: 0.000018
+2026-04-24 13:25:22,310 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1599 | Epsilon: 0.9704 | Loss: 0.000007
+2026-04-24 13:25:30,915 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1605 | Epsilon: 0.9559 | Loss: 0.000002
+2026-04-24 13:25:39,584 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.2289 | Epsilon: 0.9416 | Loss: 0.000008
+2026-04-24 13:25:48,414 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.1314 | Epsilon: 0.9276 | Loss: 0.000004
+2026-04-24 13:25:51,331 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:25:51,333 [INFO] agent.dqn_agent: Model saved to results/exp2/A1_A4/model.pt
+2026-04-24 13:25:51,665 [INFO] visualization.plots: Saved figure to results/exp2/A1_A4/equity_curves.png
+2026-04-24 13:25:51,665 [INFO] experiments.exp2_variants: Variant A1_A4: CR=20.82% (BaH=14.77%), Sharpe=0.968
+2026-04-24 13:25:51,672 [INFO] experiments.exp2_variants: Running variant: A2_A4 — Min-Max [-1,1] text-consistent, train-only fitting
+2026-04-24 13:25:51,675 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:25:51,683 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:25:59,866 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1865 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:26:08,580 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1488 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:26:17,229 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1348 | Epsilon: 0.9559 | Loss: 0.000001
+2026-04-24 13:26:25,987 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.2152 | Epsilon: 0.9416 | Loss: 0.000006
+2026-04-24 13:26:34,580 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0849 | Epsilon: 0.9276 | Loss: 0.000003
+2026-04-24 13:26:37,580 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:26:37,581 [INFO] agent.dqn_agent: Model saved to results/exp2/A2_A4/model.pt
+2026-04-24 13:26:37,835 [INFO] visualization.plots: Saved figure to results/exp2/A2_A4/equity_curves.png
+2026-04-24 13:26:37,835 [INFO] experiments.exp2_variants: Variant A2_A4: CR=0.02% (BaH=14.77%), Sharpe=1.015
+2026-04-24 13:26:37,841 [INFO] experiments.exp2_variants: Running variant: B1_pct_return — Reward = daily percentage portfolio return (B1)
+2026-04-24 13:26:37,843 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:26:37,850 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:26:45,754 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:26:54,629 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:27:03,346 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:27:12,008 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:27:20,659 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:27:23,748 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:27:23,749 [INFO] agent.dqn_agent: Model saved to results/exp2/B1_pct_return/model.pt
+2026-04-24 13:27:24,039 [INFO] visualization.plots: Saved figure to results/exp2/B1_pct_return/equity_curves.png
+2026-04-24 13:27:24,040 [INFO] experiments.exp2_variants: Variant B1_pct_return: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:27:24,048 [INFO] experiments.exp2_variants: Running variant: B2_wealth_change — Reward = daily wealth change in absolute terms (B2)
+2026-04-24 13:27:24,051 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:27:24,058 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:27:32,147 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 20880.3686 | Epsilon: 0.9851 | Loss: 47551.040023
+2026-04-24 13:27:40,716 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 18345.8501 | Epsilon: 0.9704 | Loss: 64661.403365
+2026-04-24 13:27:49,365 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 15428.0354 | Epsilon: 0.9559 | Loss: 24436.311117
+2026-04-24 13:27:58,386 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 35602.1506 | Epsilon: 0.9416 | Loss: 130651.320431
+2026-04-24 13:28:07,230 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 16771.2203 | Epsilon: 0.9276 | Loss: 118870.466890
+2026-04-24 13:28:10,113 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:28:10,114 [INFO] agent.dqn_agent: Model saved to results/exp2/B2_wealth_change/model.pt
+/usr/local/lib/python3.12/site-packages/quantstats/stats.py:892: RuntimeWarning: invalid value encountered in scalar divide
+  res = returns.mean() / divisor
+2026-04-24 13:28:10,425 [INFO] visualization.plots: Saved figure to results/exp2/B2_wealth_change/equity_curves.png
+2026-04-24 13:28:10,426 [INFO] experiments.exp2_variants: Variant B2_wealth_change: CR=0.00% (BaH=14.77%), Sharpe=0.000
+2026-04-24 13:28:10,432 [INFO] experiments.exp2_variants: Running variant: C1_single_stock — Single-stock interpretation (RELIANCE.NS only)
+2026-04-24 13:28:10,435 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:28:10,441 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:28:18,652 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:28:27,470 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:28:36,182 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:28:44,674 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:28:53,592 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:28:56,510 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:28:56,512 [INFO] agent.dqn_agent: Model saved to results/exp2/C1_single_stock/model.pt
+2026-04-24 13:28:56,833 [INFO] visualization.plots: Saved figure to results/exp2/C1_single_stock/equity_curves.png
+2026-04-24 13:28:56,834 [INFO] experiments.exp2_variants: Variant C1_single_stock: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:28:56,840 [INFO] experiments.exp2_variants: Running variant: C2_multi_stock — Multi-stock portfolio interpretation (5 Nifty 50 stocks)
+2026-04-24 13:28:56,843 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:28:56,850 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:29:05,111 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:29:13,833 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:29:22,579 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:29:31,305 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:29:40,290 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:29:43,087 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:29:43,088 [INFO] agent.dqn_agent: Model saved to results/exp2/C2_multi_stock/model.pt
+2026-04-24 13:29:43,398 [INFO] visualization.plots: Saved figure to results/exp2/C2_multi_stock/equity_curves.png
+2026-04-24 13:29:43,398 [INFO] experiments.exp2_variants: Variant C2_multi_stock: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:29:43,405 [INFO] experiments.exp2_variants: Running variant: D1_returns_only — Strict feature set: normalized returns only
+2026-04-24 13:29:43,408 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:29:43,414 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:29:51,607 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:30:00,343 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:30:09,853 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:30:18,435 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:30:27,096 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:30:29,963 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:30:29,965 [INFO] agent.dqn_agent: Model saved to results/exp2/D1_returns_only/model.pt
+2026-04-24 13:30:30,254 [INFO] visualization.plots: Saved figure to results/exp2/D1_returns_only/equity_curves.png
+2026-04-24 13:30:30,254 [INFO] experiments.exp2_variants: Variant D1_returns_only: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:30:30,261 [INFO] experiments.exp2_variants: Running variant: D2_returns_plus_indicators — Extended features: returns + SMA(10), SMA(20), RSI(14) [non-paper assumption]
+2026-04-24 13:30:30,264 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:30:30,280 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:30:38,843 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1772 | Epsilon: 0.9851 | Loss: 0.000026
+2026-04-24 13:30:47,707 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1530 | Epsilon: 0.9704 | Loss: 0.000012
+2026-04-24 13:30:56,709 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1375 | Epsilon: 0.9559 | Loss: 0.000004
+2026-04-24 13:31:05,578 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.2226 | Epsilon: 0.9416 | Loss: 0.000031
+2026-04-24 13:31:14,630 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0803 | Epsilon: 0.9276 | Loss: 0.000003
+2026-04-24 13:31:17,831 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:31:17,832 [INFO] agent.dqn_agent: Model saved to results/exp2/D2_returns_plus_indicators/model.pt
+2026-04-24 13:31:18,156 [INFO] visualization.plots: Saved figure to results/exp2/D2_returns_plus_indicators/equity_curves.png
+2026-04-24 13:31:18,156 [INFO] experiments.exp2_variants: Variant D2_returns_plus_indicators: CR=8.70% (BaH=14.77%), Sharpe=0.549
+2026-04-24 13:31:18,165 [INFO] experiments.exp2_variants: Running variant: E1_nifty50_bah — Benchmark: Buy-and-hold Nifty 50 only (paper-explicit)
+2026-04-24 13:31:18,166 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:31:18,173 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:31:26,404 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:31:34,961 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:31:43,688 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:31:52,781 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:32:01,634 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:32:04,449 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:32:04,450 [INFO] agent.dqn_agent: Model saved to results/exp2/E1_nifty50_bah/model.pt
+2026-04-24 13:32:04,761 [INFO] visualization.plots: Saved figure to results/exp2/E1_nifty50_bah/equity_curves.png
+2026-04-24 13:32:04,761 [INFO] experiments.exp2_variants: Variant E1_nifty50_bah: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:32:04,768 [INFO] experiments.exp2_variants: Running variant: E2_nifty50_bah_sma — Benchmark: Buy-and-hold + SMA(20) crossover [non-paper assumption]
+2026-04-24 13:32:04,770 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:32:04,777 [INFO] agent.dqn_agent: Starting DQN training for 16 episodes
+2026-04-24 13:32:13,038 [INFO] agent.dqn_agent: Episode 3/16 | Avg Reward: 0.1893 | Epsilon: 0.9851 | Loss: 0.000010
+2026-04-24 13:32:21,834 [INFO] agent.dqn_agent: Episode 6/16 | Avg Reward: 0.1600 | Epsilon: 0.9704 | Loss: 0.000011
+2026-04-24 13:32:30,354 [INFO] agent.dqn_agent: Episode 9/16 | Avg Reward: 0.1587 | Epsilon: 0.9559 | Loss: 0.000003
+2026-04-24 13:32:38,767 [INFO] agent.dqn_agent: Episode 12/16 | Avg Reward: 0.1937 | Epsilon: 0.9416 | Loss: 0.000010
+2026-04-24 13:32:47,245 [INFO] agent.dqn_agent: Episode 15/16 | Avg Reward: 0.0738 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:32:50,214 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.9229
+2026-04-24 13:32:50,216 [INFO] agent.dqn_agent: Model saved to results/exp2/E2_nifty50_bah_sma/model.pt
+2026-04-24 13:32:50,523 [INFO] visualization.plots: Saved figure to results/exp2/E2_nifty50_bah_sma/equity_curves.png
+2026-04-24 13:32:50,524 [INFO] experiments.exp2_variants: Variant E2_nifty50_bah_sma: CR=23.50% (BaH=14.77%), Sharpe=1.042
+2026-04-24 13:32:50,735 [INFO] visualization.plots: Saved figure to results/exp2/comparison_cumulative_return.png
+2026-04-24 13:32:50,933 [INFO] visualization.plots: Saved figure to results/exp2/comparison_sharpe_ratio.png
+2026-04-24 13:32:51,365 [INFO] visualization.plots: Saved figure to results/exp2/comparison_max_drawdown.png
+2026-04-24 13:32:51,637 [INFO] visualization.plots: Saved figure to results/exp2/comparison_profit_factor.png
+2026-04-24 13:32:51,838 [INFO] visualization.plots: Saved figure to results/exp2/comparison_winning_percentage.png
+2026-04-24 13:32:52,176 [INFO] visualization.plots: Saved figure to results/exp2/metrics_heatmap.png
+2026-04-24 13:32:52,177 [INFO] experiments.exp2_variants: 
+Sensitivity Analysis:
+{
+  "A_normalization": {
+    "n_variants": 3,
+    "run_ids": [
+      "A1_A3",
+      "A1_A4",
+      "A2_A4"
+    ],
+    "cumulative_return_range": [
+      0.0002080108642579237,
+      0.23503937774658135
+    ],
+    "sharpe_ratio_range": [
+      0.9682458567101875,
+      1.0420266052030365
+    ],
+    "outperforms_bah_count": 2,
+    "sign_change_in_outperformance": true,
+    "claim_robust": false,
+    "claim_fragile": false
+  },
+  "B_reward": {
+    "n_variants": 2,
+    "run_ids": [
+      "B1_pct_return",
+      "B2_wealth_change"
+    ],
+    "cumulative_return_range": [
+      0.0,
+      0.23503937774658135
+    ],
+    "sharpe_ratio_range": [
+      0.0,
+      1.0420266052030365
+    ],
+    "outperforms_bah_count": 1,
+    "sign_change_in_outperformance": true,
+    "claim_robust": false,
+    "claim_fragile": false
+  },
+  "C_interpretation": {
+    "n_variants": 2,
+    "run_ids": [
+      "C1_single_stock",
+      "C2_multi_stock"
+    ],
+    "cumulative_return_range": [
+      0.23503937774658135,
+      0.23503937774658135
+    ],
+    "sharpe_ratio_range": [
+      1.0420266052030365,
+      1.0420266052030365
+    ],
+    "outperforms_bah_count": 2,
+    "sign_change_in_outperformance": false,
+    "claim_robust": true,
+    "claim_fragile": false
+  },
+  "D_features": {
+    "n_variants": 2,
+    "run_ids": [
+      "D1_returns_only",
+      "D2_returns_plus_indicators"
+    ],
+    "cumulative_return_range": [
+      0.08695484008789123,
+      0.23503937774658135
+    ],
+    "sharpe_ratio_range": [
+      0.5485572128320972,
+      1.0420266052030365
+    ],
+    "outperforms_bah_count": 1,
+    "sign_change_in_outperformance": true,
+    "claim_robust": false,
+    "claim_fragile": false
+  },
+  "E_benchmark": {
+    "n_variants": 2,
+    "run_ids": [
+      "E1_nifty50_bah",
+      "E2_nifty50_bah_sma"
+    ],
+    "cumulative_return_range": [
+      0.23503937774658135,
+      0.23503937774658135
+    ],
+    "sharpe_ratio_range": [
+      1.0420266052030365,
+      1.0420266052030365
+    ],
+    "outperforms_bah_count": 2,
+    "sign_change_in_outperformance": false,
+    "claim_robust": true,
+    "claim_fragile": false
+  }
+}
+2026-04-24 13:32:52,177 [INFO] experiments.exp2_variants: Exp2 complete. 11 variants run, 0 failed.
+2026-04-24 13:32:52,177 [INFO] __main__: Experiment 2 completed successfully
+2026-04-24 13:32:52,178 [INFO] __main__: RESULTS.md saved to results/RESULTS.md
+2026-04-24 13:32:52,178 [INFO] __main__: All experiments complete. Results in results/

@@ -1,0 +1,182 @@
+[
+  {
+    "run_id": "A1_A3",
+    "description": "Min-Max [0,1] formula, full-sample fitting (strict exp1 baseline)",
+    "ambiguity_family": "A_normalization",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "A1_A4",
+    "description": "Min-Max [0,1] formula, train-only fitting (no leakage)",
+    "ambiguity_family": "A_normalization",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "train_only",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "A2_A4",
+    "description": "Min-Max [-1,1] text-consistent, train-only fitting",
+    "ambiguity_family": "A_normalization",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "neg1_1",
+    "normalization_fit_scope": "train_only",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "B1_pct_return",
+    "description": "Reward = daily percentage portfolio return (B1)",
+    "ambiguity_family": "B_reward",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "B2_wealth_change",
+    "description": "Reward = daily wealth change in absolute terms (B2)",
+    "ambiguity_family": "B_reward",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "wealth_change",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "C1_single_stock",
+    "description": "Single-stock interpretation (RELIANCE.NS only)",
+    "ambiguity_family": "C_interpretation",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "C2_multi_stock",
+    "description": "Multi-stock portfolio interpretation (5 Nifty 50 stocks)",
+    "ambiguity_family": "C_interpretation",
+    "tickers": [
+      "RELIANCE.NS",
+      "TCS.NS",
+      "HDFCBANK.NS",
+      "INFY.NS",
+      "ICICIBANK.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "multi_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "D1_returns_only",
+    "description": "Strict feature set: normalized returns only",
+    "ambiguity_family": "D_features",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "D2_returns_plus_indicators",
+    "description": "Extended features: returns + SMA(10), SMA(20), RSI(14) [non-paper assumption]",
+    "ambiguity_family": "D_features",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_plus_indicators",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "E1_nifty50_bah",
+    "description": "Benchmark: Buy-and-hold Nifty 50 only (paper-explicit)",
+    "ambiguity_family": "E_benchmark",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  {
+    "run_id": "E2_nifty50_bah_sma",
+    "description": "Benchmark: Buy-and-hold + SMA(20) crossover [non-paper assumption]",
+    "ambiguity_family": "E_benchmark",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah_sma",
+    "n_episodes": 16,
+    "seed": 42
+  }
+]

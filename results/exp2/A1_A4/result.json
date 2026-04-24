@@ -1,0 +1,34 @@
+{
+  "run_id": "A1_A4",
+  "description": "Min-Max [0,1] formula, train-only fitting (no leakage)",
+  "ambiguity_family": "A_normalization",
+  "config": {
+    "run_id": "A1_A4",
+    "description": "Min-Max [0,1] formula, train-only fitting (no leakage)",
+    "ambiguity_family": "A_normalization",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "train_only",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  "cumulative_return": 0.20817524810791266,
+  "sharpe_ratio": 0.9682458567101875,
+  "max_drawdown": -0.2033476066869293,
+  "profit_factor": 2.071784129849547,
+  "winning_percentage": 0.5652173913043478,
+  "avg_holding_period": 143.65217391304347,
+  "n_trades": 23,
+  "n_days": 238,
+  "benchmark_cumulative_return": 0.14770779358198283,
+  "benchmark_sharpe_ratio": 0.6050207654111353,
+  "benchmark_max_drawdown": -0.3843985245274205,
+  "outperforms_bah_cumret": true,
+  "outperforms_bah_sharpe": true
+}

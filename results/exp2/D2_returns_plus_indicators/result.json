@@ -1,0 +1,34 @@
+{
+  "run_id": "D2_returns_plus_indicators",
+  "description": "Extended features: returns + SMA(10), SMA(20), RSI(14) [non-paper assumption]",
+  "ambiguity_family": "D_features",
+  "config": {
+    "run_id": "D2_returns_plus_indicators",
+    "description": "Extended features: returns + SMA(10), SMA(20), RSI(14) [non-paper assumption]",
+    "ambiguity_family": "D_features",
+    "tickers": [
+      "RELIANCE.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "single_stock",
+    "feature_set": "returns_plus_indicators",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  "cumulative_return": 0.08695484008789123,
+  "sharpe_ratio": 0.5485572128320972,
+  "max_drawdown": -0.1996977631398995,
+  "profit_factor": 0.0,
+  "winning_percentage": 0.0,
+  "avg_holding_period": 0.0,
+  "n_trades": 0,
+  "n_days": 238,
+  "benchmark_cumulative_return": 0.14770779358198283,
+  "benchmark_sharpe_ratio": 0.6050207654111353,
+  "benchmark_max_drawdown": -0.3843985245274205,
+  "outperforms_bah_cumret": false,
+  "outperforms_bah_sharpe": false
+}

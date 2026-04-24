@@ -1,0 +1,39 @@
+2026-04-24 13:21:38,150 [INFO] __main__: Starting Experiment 1: Strict Paper Replication
+2026-04-24 13:21:38,151 [INFO] experiments.exp1_strict_replication: ============================================================
+2026-04-24 13:21:38,151 [INFO] experiments.exp1_strict_replication: EXP1: Strict Paper Replication — DQN Trading on Nifty 50
+2026-04-24 13:21:38,151 [INFO] experiments.exp1_strict_replication: ============================================================
+2026-04-24 13:21:38,152 [INFO] experiments.exp1_strict_replication: Assumption sheet saved to results/exp1/assumption_sheet.json
+2026-04-24 13:21:38,152 [INFO] experiments.exp1_strict_replication: Downloading data for tickers: ['RELIANCE.NS']
+2026-04-24 13:21:38,152 [INFO] data.download: Loading cached data from data/cache/nifty50_2010-01-01_2020-12-31.csv
+2026-04-24 13:21:38,157 [INFO] data.download: Loading cached benchmark from data/cache/benchmark_NSEI_2010-01-01_2020-12-31.csv
+2026-04-24 13:21:38,161 [INFO] data.download: Aligned to 2692 common trading dates (stocks: 2712, benchmark: 2692)
+2026-04-24 13:21:38,172 [INFO] experiments.exp1_strict_replication: Data downloaded: 2692 rows, 1 stocks
+2026-04-24 13:21:38,174 [INFO] data.preprocess: Train: 2443 rows (2010-01-04 to 2019-12-31), Test: 249 rows (2020-01-01 to 2020-12-30)
+2026-04-24 13:21:38,191 [INFO] experiments.exp1_strict_replication: Features prepared: train_states=(2432, 10), test_states=(239, 10)
+2026-04-24 13:21:39,090 [INFO] experiments.exp1_strict_replication: Training DQN agent for 50 episodes...
+2026-04-24 13:21:39,091 [INFO] agent.dqn_agent: Starting DQN training for 50 episodes
+2026-04-24 13:21:53,168 [INFO] agent.dqn_agent: Episode 5/50 | Avg Reward: 0.1737 | Epsilon: 0.9752 | Loss: 0.000009
+2026-04-24 13:22:07,997 [INFO] agent.dqn_agent: Episode 10/50 | Avg Reward: 0.1973 | Epsilon: 0.9511 | Loss: 0.000005
+2026-04-24 13:22:22,412 [INFO] agent.dqn_agent: Episode 15/50 | Avg Reward: 0.0942 | Epsilon: 0.9276 | Loss: 0.000002
+2026-04-24 13:22:37,245 [INFO] agent.dqn_agent: Episode 20/50 | Avg Reward: 0.0804 | Epsilon: 0.9046 | Loss: 0.000001
+2026-04-24 13:22:51,844 [INFO] agent.dqn_agent: Episode 25/50 | Avg Reward: 0.0740 | Epsilon: 0.8822 | Loss: 0.000002
+2026-04-24 13:23:06,895 [INFO] agent.dqn_agent: Episode 30/50 | Avg Reward: 0.1218 | Epsilon: 0.8604 | Loss: 0.000005
+2026-04-24 13:23:21,960 [INFO] agent.dqn_agent: Episode 35/50 | Avg Reward: 0.1557 | Epsilon: 0.8391 | Loss: 0.000004
+2026-04-24 13:23:37,192 [INFO] agent.dqn_agent: Episode 40/50 | Avg Reward: 0.1775 | Epsilon: 0.8183 | Loss: 0.000004
+2026-04-24 13:23:52,821 [INFO] agent.dqn_agent: Episode 45/50 | Avg Reward: 0.1833 | Epsilon: 0.7981 | Loss: 0.000006
+2026-04-24 13:24:08,368 [INFO] agent.dqn_agent: Episode 50/50 | Avg Reward: 0.1094 | Epsilon: 0.7783 | Loss: 0.000002
+2026-04-24 13:24:08,368 [INFO] agent.dqn_agent: Training complete. Final epsilon: 0.7783
+2026-04-24 13:24:08,371 [INFO] agent.dqn_agent: Model saved to results/exp1/dqn_model.pt
+2026-04-24 13:24:09,018 [INFO] visualization.plots: Saved figure to results/exp1/training_history.png
+2026-04-24 13:24:09,018 [INFO] experiments.exp1_strict_replication: Evaluating DQN agent on 2020 test period...
+2026-04-24 13:24:09,063 [INFO] experiments.exp1_strict_replication: 
+                      Cumulative Return Sharpe Ratio Max Drawdown Profit Factor Winning % Avg Holding (days)  N Trades
+Strategy                                                                                                              
+DQN Strategy                     -0.02%      -0.2828       -0.06%        0.5476    50.00%                2.0         2
+Buy-and-Hold Nifty 50            14.77%       0.6050      -38.44%        1.1301    58.87%              248.0         1
+2026-04-24 13:24:09,320 [INFO] visualization.plots: Saved figure to results/exp1/equity_curves.png
+2026-04-24 13:24:09,736 [INFO] visualization.plots: Saved figure to results/exp1/drawdown.png
+2026-04-24 13:24:09,736 [INFO] experiments.exp1_strict_replication: Exp1 complete. Results saved to results/exp1
+2026-04-24 13:24:09,743 [INFO] __main__: Experiment 1 completed successfully
+2026-04-24 13:24:09,744 [INFO] __main__: RESULTS.md saved to results/RESULTS.md
+2026-04-24 13:24:09,744 [INFO] __main__: All experiments complete. Results in results/

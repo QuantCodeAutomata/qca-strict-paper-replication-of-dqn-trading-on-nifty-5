@@ -1,0 +1,9 @@
+{
+  "original_rows": "2692",
+  "original_cols": "['RELIANCE.NS']",
+  "missing_before": "{'RELIANCE.NS': 0}",
+  "method": "ffill",
+  "rows_dropped": "0",
+  "missing_after": "{'RELIANCE.NS': 0}",
+  "final_rows": "2692"
+}

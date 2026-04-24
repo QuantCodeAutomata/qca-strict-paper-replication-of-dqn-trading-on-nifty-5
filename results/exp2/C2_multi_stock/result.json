@@ -1,0 +1,38 @@
+{
+  "run_id": "C2_multi_stock",
+  "description": "Multi-stock portfolio interpretation (5 Nifty 50 stocks)",
+  "ambiguity_family": "C_interpretation",
+  "config": {
+    "run_id": "C2_multi_stock",
+    "description": "Multi-stock portfolio interpretation (5 Nifty 50 stocks)",
+    "ambiguity_family": "C_interpretation",
+    "tickers": [
+      "RELIANCE.NS",
+      "TCS.NS",
+      "HDFCBANK.NS",
+      "INFY.NS",
+      "ICICIBANK.NS"
+    ],
+    "normalization_range": "0_1",
+    "normalization_fit_scope": "full_sample",
+    "reward_type": "pct_return",
+    "mode": "multi_stock",
+    "feature_set": "returns_only",
+    "benchmark_set": "nifty50_bah",
+    "n_episodes": 16,
+    "seed": 42
+  },
+  "cumulative_return": 0.23503937774658135,
+  "sharpe_ratio": 1.0420266052030365,
+  "max_drawdown": -0.20375387426844394,
+  "profit_factor": 0.9831703399397912,
+  "winning_percentage": 0.2857142857142857,
+  "avg_holding_period": 125.85714285714286,
+  "n_trades": 14,
+  "n_days": 238,
+  "benchmark_cumulative_return": 0.14770779358198283,
+  "benchmark_sharpe_ratio": 0.6050207654111353,
+  "benchmark_max_drawdown": -0.3843985245274205,
+  "outperforms_bah_cumret": true,
+  "outperforms_bah_sharpe": true
+}
